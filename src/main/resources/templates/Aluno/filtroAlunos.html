@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>Encontrar Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+    <div class="container" style="margin-top: 50px;">
+        <h4><i class="fas fa-search"></i> Encontrar Alunos</h4>
+        <hr>
+        <br>
+
+        <form method="post">
+            <div class="input-group col-6">
+                <input class="form-control" placeholder="Busque por o nome do aluno...">
+
+                <div class="input-group-append">
+                    <a type="submit" class="btn btn-primary">Pequisar</a>
+                </div>
+
+            </div>
+
+
+        </form>
+        <br>
+        <br>
+        <hr>
+
+        <!-- Alunos Ativos -->
+
+        <div class="row">
+            <div class="card" style="width: 288px">
+                <a th:href="@{/alunos-ativos}">
+                    <img class="card-img-top" src="img/Alunos-Ativos.jpg" />
+                </a>
+                <div class="card-body">
+
+                    <h5 class="card-title">Alunos Ativos no Sitema</h5>
+                    <p class="card-text">Busque por todos os alunos ativos no Sistema.</p>
+                   
+                </div>
+            </div>
+
+            <!-- Alunos Inativos -->
+
+            <div class="card ml-3" style="width: 288px">
+                <a th:href="@{/alunos-inativos}">
+                    <img class="card-img-top" src="img/Alunos-Inativos.jpg" />
+                </a>
+                <div class="card-body">
+
+                    <h5 class="card-title">Alunos Inativos no Sitema</h5>
+                    <p class="card-text">Busque por todos os alunos inativos no Sistema.</p>
+                   
+                </div>
+            </div>
+
+            <!-- Alunos Cancelados -->
+
+            <div class="card ml-3" style="width: 288px">
+                <a href="@{/alunos-cancelados">
+                <img class="card-img-top" src="img/Alunos-Trancados.jpg" />
+            </a>
+                <div class="card-body">
+
+                    <h5 class="card-title">Alunos Cancelados no Sitema</h5>
+                    <p class="card-text">Busque por todos os alunos com matrícula trancada no Sistema.</p>
+                    <a class="btn btn-outline-primary">Clique Aqui!</a>
+                </div>
+            </div>
+
+            <!-- Alunos Trancados -->
+
+            <div class="card mt-3" style="width: 288px">
+                <img class="card-img-top" src="img/Alunos-Cancelados.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title">Alunos com matrícula cancelada no Sitema</h5>
+                    <p class="card-text">Busque por todos os alunos com matrícula cancelada no Sistema.</p>
+                    <a class="btn btn-outline-primary">Clique Aqui!</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
